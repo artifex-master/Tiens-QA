@@ -57,7 +57,7 @@ html {
 .btn-first {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  background-color: #118943;
+  background-color: #F5B212;
   border-radius: 12px;
   text-transform: uppercase;
   color: #fff;
@@ -525,7 +525,7 @@ html {
 }
 .form .form__label-wrapper {
   height: 60px;
-  background: linear-gradient(109.6deg, #56ab2f, #a8e063);
+  background: #F5B212;
   padding-top: 25px;
   padding-bottom: 0;
   padding-left: 28px;
