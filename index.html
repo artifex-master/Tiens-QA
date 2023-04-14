@@ -460,72 +460,71 @@
                 <div class="form__label-wrapper">
                   <span>Не нашли ответ на свой вопрос? Задайте его здесь</span>
                 </div>
-                <div class="form__row">
-                  <div class="form__col">
+                <div class="form__inner">
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__input-wrapper">
+                        <label for="">Фамилия:</label>
+                        <input class="form__input" type="text" id="lname" placeholder="Фамилия" />
+                        <div class="error"></div>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__input-wrapper">
+                        <label for="">Имя:</label>
+                        <input class="form__input" type="text" id="fname" placeholder="Имя"  />
+                        <div class="error"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__row">
                     <div class="form__input-wrapper">
-                      <label for="">Фамилия:</label>
-                      <input class="form__input" type="text" id="lname" placeholder="Фамилия" />
+                      <label for="">Страна:</label>
+                      <input class="form__input" type="text" id="country" placeholder="Выберите вашу страну"  />
+                      <div class="error"></div>
+                      <!-- <div class="form__country-wrapper">
+                        <div class="country-wrapper__selectbox">
+                          <div class="country-wrapper__span">
+                            <span>Выберите страну</span>
+                          </div>
+                          <div class="country-wrapper__arrow">
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                          </div>
+                        </div>
+                        <div class="country-wrapper__dropdown">
+                          <div class="country-dropdown__row">
+                            <input type="radio" name="" id="kazakhstan" />
+                            <label for="kazakhstan">Казахстан</label>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__input-wrapper">
+                      <label for="">Номер телефона:</label>
+                      <input class="form__input" type="tel" id="tel" placeholder="+7 ( )"  />
                       <div class="error"></div>
                     </div>
                   </div>
-                  <div class="form__col">
+                  <div class="form__row">
                     <div class="form__input-wrapper">
-                      <label for="">Имя:</label>
-                      <input class="form__input" type="text" id="fname" placeholder="Имя"  />
+                      <label for="">Email:</label>
+                      <input class="form__input" type="email" id="email" placeholder="Email"  />
                       <div class="error"></div>
                     </div>
                   </div>
-                </div>
-
-                <div class="form__row">
-                  <div class="form__input-wrapper">
-                    <label for="">Страна:</label>
-
-                    <input class="form__input" type="text" id="country" placeholder="Выберите вашу страну"  />
-                    <div class="error"></div>
-                    <!-- <div class="form__country-wrapper">
-                      <div class="country-wrapper__selectbox">
-                        <div class="country-wrapper__span">
-                          <span>Выберите страну</span>
-                        </div>
-                        <div class="country-wrapper__arrow">
-                          <ion-icon name="caret-down-outline"></ion-icon>
-                        </div>
-                      </div>
-                      <div class="country-wrapper__dropdown">
-                        <div class="country-dropdown__row">
-                          <input type="radio" name="" id="kazakhstan" />
-                          <label for="kazakhstan">Казахстан</label>
-                        </div>
-                      </div>
-                    </div> -->
+                  <div class="form__row">
+                    <div class="form__input-wrapper">
+                      <label for="">Задайте вопрос:</label>
+                      <div class="error"></div>
+                      <textarea class="form__textarea form__input textarea" placeholder="Задайте ваш вопрос..." id="textarea" ></textarea>
+                    </div>
                   </div>
-                </div>
-
-                <div class="form__row">
-                  <div class="form__input-wrapper">
-                    <label for="">Номер телефона:</label>
-                    <input class="form__input" type="tel" id="tel" placeholder="+7 ( )"  />
-                    <div class="error"></div>
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form__input-wrapper">
-                    <label for="">Email:</label>
-                    <input class="form__input" type="email" id="email" placeholder="Email"  />
-                    <div class="error"></div>
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form__input-wrapper">
-                    <label for="">Задайте вопрос:</label>
-                    <div class="error"></div>
-                    <textarea class="form__textarea form__input textarea" placeholder="Задайте ваш вопрос..." id="textarea" ></textarea>
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form__btn-wrapper">
-                    <button type="submit" class="btn-first">ОТПРАВИТЬ</button>
+                  <div class="form__row">
+                    <div class="form__btn-wrapper">
+                      <button type="submit" class="btn-first">ОТПРАВИТЬ</button>
+                    </div>
                   </div>
                 </div>
               </form>

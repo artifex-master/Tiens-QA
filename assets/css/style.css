@@ -80,24 +80,20 @@ html {
 
 .btn-first {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #F5B212;
-  border-radius: 12px;
+  border-radius: 50px;
   text-transform: uppercase;
   color: #fff;
-  padding: 15px 28px;
+  padding: 17px 64px;
   border: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-@media only screen and (max-width: 992px) {
-  .btn-first {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .btn-first {
-    font-size: 14px;
-  }
+
+.btn-first:hover {
+  background-color: #f7bf3b;
 }
 
 .container {
@@ -361,7 +357,6 @@ html {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 42%;
           flex: 0 0 42%;
-  margin-right: 22px;
 }
 @media only screen and (max-width: 768px) {
   .faq .faq__inner .faq__col:nth-child(1) {
@@ -524,7 +519,9 @@ html {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   border: 1px solid rgba(51, 51, 51, 0.08);
-  padding: 36px 32px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: none;
 }
 @media only screen and (max-width: 1330px) {
   .form {
@@ -546,6 +543,17 @@ html {
   .form {
     font-size: 14px;
   }
+}
+.form .form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 60px;
+  padding-bottom: 30px;
 }
 .form .form__label-wrapper {
   height: 60px;
@@ -619,8 +627,8 @@ html {
 }
 .form .form__row .form__col:nth-child(2) {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 49%;
-          flex: 0 0 49%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 .form .form__row .form__btn-wrapper {
   width: 100%;
@@ -643,7 +651,7 @@ html {
 }
 .form .form__input-wrapper label {
   color: #333333;
-  margin-bottom: 8px;
+  margin-bottom: 13px;
 }
 .form .form__input-wrapper .form__country-wrapper {
   width: 560px;
@@ -705,20 +713,11 @@ html {
 }
 .form .form__input-wrapper .form__input {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   width: 100%;
-  border: 1px solid rgba(51, 51, 51, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.14);
   padding: 8px 12px;
-}
-@media only screen and (max-width: 992px) {
-  .form .form__input-wrapper .form__input {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .form .form__input-wrapper .form__input {
-    font-size: 14px;
-  }
+  border-radius: 6px;
 }
 .form .form__input-wrapper .form__textarea {
   font-family: "Open Sans", sans-serif;
@@ -732,6 +731,7 @@ html {
   outline: none;
   font-family: "Opens Sans", sans-serif;
   padding: 8px 12px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 992px) {
   .form .form__input-wrapper .form__textarea {

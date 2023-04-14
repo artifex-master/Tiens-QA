@@ -75,15 +75,19 @@ html {
 }
 
 .btn-first {
-  @include fs-3();
+  @include fs-2();
   background-color: #F5B212;
-  border-radius: 12px;
+  border-radius: 50px;
   text-transform: uppercase;
   color: #fff;
-  padding: 15px 28px;
+  padding: 17px 64px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 
+}
+.btn-first:hover {
+  background-color: #f7bf3b;
 }
 
 .container {
@@ -302,7 +306,6 @@ html {
         margin-right: 0;
       }
       flex: 0 0 42%;
-      margin-right: 22px;
       .faq__faq-list {
         @media only screen and (max-width: 768px) {
           margin-top: 40px;
@@ -421,7 +424,15 @@ html {
   }
   @include fs-3();
   border: 1px solid rgb(51, 51, 51, 0.08);
-  padding: 36px 32px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: none;
+
+  .form__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+    padding-bottom: 30px;
+  }
 
   .form__label-wrapper {
     @media only screen and (max-width: 1330px) {
@@ -467,7 +478,7 @@ html {
       margin-right: 20px;
     }
     .form__col:nth-child(2) {
-      flex: 0 0 49%;
+      flex: 0 0 50%;
     }
 
     .form__btn-wrapper {
@@ -484,7 +495,7 @@ html {
     flex-direction: column;
     label {
       color: #333333;
-      margin-bottom: 8px;
+      margin-bottom: 13px;
     }
 
     .form__country-wrapper {
@@ -522,10 +533,11 @@ html {
     }
   
     .form__input {
-      @include fs-3();
+      @include fs-1();
       width: 100%;
-      border: 1px solid rgb(51, 51, 51, 0.2);
+      border: 1px solid rgb(0, 0, 0, 0.14);
       padding: 8px 12px;
+      border-radius: 6px;
     }
 
     .form__textarea {
@@ -539,6 +551,7 @@ html {
       outline: none;
       font-family: $open-sans;
       padding: 8px 12px;
+      margin-bottom: 20px;
 
     }
 
