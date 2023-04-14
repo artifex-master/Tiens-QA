@@ -49,6 +49,30 @@ input {
   outline: none;
 }
 
+::-webkit-input-placeholder {
+  color: #333;
+}
+
+::-moz-placeholder {
+  color: #333;
+}
+
+:-ms-input-placeholder {
+  color: #333;
+}
+
+::-ms-input-placeholder {
+  color: #333;
+}
+
+::placeholder {
+  color: #333;
+}
+
+input[type=radio] {
+  display: none;
+}
+
 html {
   color: #333333;
   font-family: "Opens Sans", sans-serif;
@@ -57,7 +81,7 @@ html {
 .btn-first {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  background-color: #118943;
+  background-color: #F5B212;
   border-radius: 12px;
   text-transform: uppercase;
   color: #fff;
@@ -80,7 +104,7 @@ html {
   width: auto;
   margin: 0 90px;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 9920px) {
   .container {
     margin: 0 40px;
   }
@@ -137,8 +161,8 @@ html {
   padding: 0 90px;
   padding-top: 36px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.08);
-  border-top: 1px solid rgba(51, 51, 51, 0.08);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+  border-top: 1px solid rgba(51, 51, 51, 0.3);
 }
 @media only screen and (max-width: 768px) {
   .header-bottom {
@@ -298,22 +322,40 @@ html {
   overflow: hidden;
 }
 
+.main__faq {
+  background-color: #fff;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+@media only screen and (max-width: 992px) {
+  .main__faq {
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__faq {
+    padding-top: 0;
+  }
+}
+
 .faq {
   width: 100%;
+}
+@media only screen and (max-width: 992px) {
+  .faq {
+    width: auto;
+    margin: 0 20px;
+  }
 }
 .faq .faq__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .faq .faq__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 .faq .faq__inner .faq__col:nth-child(1) {
   -webkit-box-flex: 0;
@@ -357,6 +399,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item .faq-list__question-wrapper .close-outline {
   width: -webkit-max-content;
@@ -365,9 +408,13 @@ html {
   margin-right: 20px;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item .faq-list__question-wrapper .close-outline ion-icon {
   font-size: 51px;
+  color: purple;
 }
 @media only screen and (max-width: 600px) {
   .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item .faq-list__question-wrapper .close-outline ion-icon {
@@ -385,12 +432,19 @@ html {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Open Sans", sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 40px;
+  color: purple;
+  padding-left: 75px;
 }
 @media only screen and (max-width: 992px) {
   .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item .faq-list__question-wrapper .faq-list__question {
     line-height: 36px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item .faq-list__question-wrapper .faq-list__question {
+    padding-left: 52px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -409,6 +463,8 @@ html {
   line-height: 28px;
   font-weight: normal;
   padding: 17px 0;
+  padding-bottom: 16px;
+  padding-top: 42px;
   display: none;
   -webkit-transition: 0.1s ease;
   transition: 0.1s ease;
@@ -429,7 +485,7 @@ html {
   }
 }
 .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item.active {
-  border-bottom: 4px solid rgb(17, 137, 67);
+  border-bottom: 4px solid #F5B212;
 }
 .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item.active .faq-list__accordion {
   display: block;
@@ -441,10 +497,14 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 .faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item.active .faq-list__question-wrapper .close-outline {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.faq .faq__inner .faq__col:nth-child(1) .faq__faq-list .faq-list__item.active .faq-list__question-wrapper .faq-list__question {
+  position: relative;
 }
 .faq .faq__inner .faq__col:nth-child(2) {
   -webkit-box-flex: 0;
@@ -459,11 +519,18 @@ html {
 }
 
 .form {
+  width: 1220px;
+  margin: 0 auto;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   border: 1px solid rgba(51, 51, 51, 0.08);
-  border-top: 4px solid rgb(17, 137, 67);
   padding: 36px 32px;
+}
+@media only screen and (max-width: 1330px) {
+  .form {
+    width: 100%;
+    padding: 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .form {
@@ -480,11 +547,69 @@ html {
     font-size: 14px;
   }
 }
+.form .form__label-wrapper {
+  height: 60px;
+  background: #F5B212;
+  padding-top: 25px;
+  padding-bottom: 0;
+  padding-left: 28px;
+  padding-right: 28px;
+  border-radius: 6px 6px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 1330px) {
+  .form .form__label-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 140px;
+  }
+}
+.form .form__label-wrapper span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+}
+@media only screen and (max-width: 992px) {
+  .form .form__label-wrapper span {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .form .form__label-wrapper span {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 1330px) {
+  .form .form__label-wrapper span {
+    margin-bottom: 28px;
+  }
+}
+.form .form__label-wrapper .form__logo {
+  width: 120px;
+  height: 80px;
+}
 .form .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .form .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .form .form__row .form__col:nth-child(1) {
   -webkit-box-flex: 0;
@@ -519,6 +644,64 @@ html {
 .form .form__input-wrapper label {
   color: #333333;
   margin-bottom: 8px;
+}
+.form .form__input-wrapper .form__country-wrapper {
+  width: 560px;
+}
+.form .form__input-wrapper .form__country-wrapper .country-wrapper__selectbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form .form__input-wrapper .form__country-wrapper .country-wrapper__selectbox .country-wrapper__span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+@media only screen and (max-width: 992px) {
+  .form .form__input-wrapper .form__country-wrapper .country-wrapper__selectbox .country-wrapper__span {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .form .form__input-wrapper .form__country-wrapper .country-wrapper__selectbox .country-wrapper__span {
+    font-size: 14px;
+  }
+}
+.form .form__input-wrapper .form__country-wrapper .country-wrapper__selectbox .country-wrapper__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form .form__input-wrapper .form__country-wrapper .country-wrapper__dropdown {
+  background-color: #fff;
+}
+.form .form__input-wrapper .form__country-wrapper .country-wrapper__dropdown .country-dropdown__row {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
 }
 .form .form__input-wrapper .form__input {
   font-family: "Open Sans", sans-serif;
@@ -559,6 +742,10 @@ html {
   .form .form__input-wrapper .form__textarea {
     font-size: 14px;
   }
+}
+
+.form__input-wrapper._error .form__input {
+  border: 1px solid red;
 }
 
 .footer .footer__outer .footer__inner .footer__row:nth-child(1) {
