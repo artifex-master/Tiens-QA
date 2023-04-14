@@ -15,11 +15,6 @@ const faqItems = document.querySelectorAll(".faq-list__item");
 const body = document.querySelector("body");
 
 
-
-
-
-
-
 mobileMenu.addEventListener("click", function() {
   toggleFunc(accordion);
   toggleFunc(mobileMenu);
@@ -34,7 +29,7 @@ faqItems.forEach(o => {
 });
 
 
-const form = document.querySelector("form");
+const form = document.getElementById("form");
 const last_name = document.getElementById("lname");
 const first_name = document.getElementById("fname");
 const country = document.getElementById("country");
@@ -46,10 +41,24 @@ const inputControl = document.querySelector(".form__input-wrapper");
 
 
 // Event Listener of the form
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", function(e) {
   e.preventDefault();
   validateInputs();
-}); 
+
+  const prePayload = new FormData(form);
+  const payload = new URLSearchParams(prePayload);
+
+  console.log([...payload]);
+
+  // fetch('https://webjack.ru/webhooks/http/56a5c13b4e3e4ac99a57709fff8ed104/', {
+  //   method: 'POST',
+  //   body: payload,
+  // })
+  //   .then(res => res.json())
+  //   .then(data => console.log(data))
+  //   .catch(err => console.log(err));
+});
+
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
@@ -117,9 +126,10 @@ const validateInputs = () => {
   }
 
   if(textareaValue === '') {
-    setError(textarea, 'Задайте ваш вопрос');
+    setError(textarea, 'Вы не задали вопрос. Задайте его здесь');
   } else {
     setSuccess(textarea);
   }
 
 }
+

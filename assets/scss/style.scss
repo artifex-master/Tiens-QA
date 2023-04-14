@@ -14,7 +14,7 @@ $open-sans: 'Opens Sans', sans-serif;
 
 // Placeholder
 ::placeholder {
-  color: #333;
+  color: #b3b3b3;
 };
 
 // Mixins
@@ -27,7 +27,7 @@ $open-sans: 'Opens Sans', sans-serif;
 @mixin fs-1 {
   font: {
     family: 'Open Sans', sans-serif;
-    size: 14px;
+    size: 16px;
   }
 }
 
@@ -40,14 +40,14 @@ $open-sans: 'Opens Sans', sans-serif;
 
 @mixin fs-3 {
   @media only screen and (max-width: 992px) {
-    font-size: 16px;
+    font-size: 22px;
   }
   @media only screen and (max-width: 600px) {
-    font-size: 14px;
+    font-size: 20px;
   }
   font: {
     family: 'Open Sans', sans-serif;
-    size: 18px;
+    size: 24px;
   }
 }
 
@@ -91,11 +91,11 @@ html {
 }
 
 .container {
-  @media only screen and (max-width: 9920px) {
-    margin: 0 40px;
-  }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 992px) {
     margin: 0 20px;
+  }
+  @media only screen and (max-width: 360px) {
+    margin: 0 3px;
   }
   width: auto;
   margin: 0 90px;
@@ -315,24 +315,30 @@ html {
         flex-direction: column;
   
         .faq-list__item {
+          @media only screen and (max-width: 600px) {
+            border-bottom: 1px solid rgb(51, 51, 51, 0.4);
+          }
           display: flex;
           flex-direction: column;
           cursor: pointer;
           padding: 16px 0;
-          border-bottom: 1px solid rgb(51, 51, 51, 0.08);
   
           .faq-list__question-wrapper {
+
             display: flex;
             position: relative;
   
             .close-outline {
+              @media only screen and (max-width: 600px) {
+                display: none;
+              }
               width: max-content;
               ion-icon { 
                 @media only screen and (max-width: 600px) {
                   font-size: 38px;
                 }
                 font-size: 51px; 
-                color: purple;
+                color: rgb(204, 0, 204, 0.4);
               }
               margin-right: 20px;
               transition: 0.25s ease;
@@ -345,27 +351,31 @@ html {
               @media only screen and (max-width: 992px) {
                 line-height: 36px;
               }
-              @media only screen and (max-width: 460px) {
-                padding-left: 52px;
+              @media only screen and (max-width: 600px) {
+                padding-left: 0;
+                margin-bottom: 18px;
               }
               @include center();
               @include fs-4();
               line-height: 40px;
-              color: purple;
+              color: rgb(179, 0, 179, 1);
               padding-left: 75px;
             }
           }
   
           .faq-list__accordion {
+            @media only screen and (max-width: 992px) {
+              line-height: 34px;
+            }
             @media only screen and (max-width: 600px) {
-              line-height: 24px;
+              line-height: 31px;
             }
             @include fs-3();
-            line-height: 28px;
+            line-height: 38px;
             font-weight: normal;
             padding: 17px 0;
             padding-bottom: 16px;
-            padding-top: 42px;
+            padding-top: 16px;
             display: none;
             transition: 0.1s ease;
   
@@ -401,7 +411,6 @@ html {
       @media only screen and (max-width: 768px) {
         padding: 14px 0;
       }
-      flex: 0 0 55%;
       padding: 14px 17px;
   
     }
@@ -409,6 +418,10 @@ html {
 
 
 
+}
+
+.red {
+  color: red;     
 }
 
 // Form
@@ -426,8 +439,15 @@ html {
   border: 1px solid rgb(51, 51, 51, 0.08);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border: none;
+  border-radius: 6px;
 
   .form__inner {
+    @media only screen and (max-width: 600px) {
+      padding: 0 38px;
+    }
+    @media only screen and (max-width: 361px) {
+      padding: 0 20px;
+    }
     display: flex;
     flex-direction: column;
     padding: 0 60px;
@@ -437,7 +457,11 @@ html {
   .form__label-wrapper {
     @media only screen and (max-width: 1330px) {
       flex-direction: column;
-      height: 140px;
+      height: 70px;
+    }
+    @media only screen and (max-width: 1330px) {
+      flex-direction: column;
+      height: 100px;
     }
     height: 60px;
     background: #F5B212;
@@ -449,6 +473,7 @@ html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    line-height: 28px;
 
     span {
       @include fs-4();
@@ -531,18 +556,17 @@ html {
 
 
     }
+
   
     .form__input {
       @include fs-1();
-      width: 100%;
       border: 1px solid rgb(0, 0, 0, 0.14);
       padding: 8px 12px;
       border-radius: 6px;
     }
 
     .form__textarea {
-      @include fs-3();
-      width: 100%;
+      @include fs-1();
       height: 220px;
       border: 1px solid rgb(51, 51, 51, 0.2);
       -webkit-appearance: none;
@@ -560,11 +584,23 @@ html {
 
 }
 
+.error {
+  @include fs-1();
+  color: red;
+  padding: 5px 6px;
+}
+
 .form__input-wrapper._error {
   .form__input {
-    border: 1px solid red;
+    border: 2px solid red;
   }
 
+}
+
+.form__input-wrapper._success {
+  .form__input {
+    border: 2px solid #00b300;
+  }
 }
 
 // Footer
